@@ -6,7 +6,7 @@ COPY package.json ./
 COPY package-lock.json ./
 COPY tsconfig.json ./
 COPY tsconfig.build.json ./
-COPY nest-cli.json ./
-COPY dist/ ./dist/
 
 RUN npm install
+
+CMD [ "npm", "run", "start:dev" ]
